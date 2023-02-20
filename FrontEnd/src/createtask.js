@@ -11,7 +11,7 @@ const CreateTask = () => {
     let navigate = useNavigate()
 
     const onSubmit = (e) => {
-        axios.post("https://task-management-backend.netlify.app/.netlify/functions/api/createtask", { Title, Description, Deadline })
+        axios.post("https://mern-stack-backend.netlify.app/.netlify/functions/api/createtask", { Title, Description, Deadline })
             .then((res) => { console.log(res.data); setCreate(res.data) })
             .catch((err) => { console.log(err.message); setError(err.message) })
         e.preventDefault();

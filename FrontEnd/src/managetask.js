@@ -6,7 +6,7 @@ const ManageTask = () => {
     let [error, setError] = useState("")
 
     const GetAllTasks = () => {
-        axios.get("https://task-management-backend.netlify.app/.netlify/functions/api/gettask")
+        axios.get("https://mern-stack-backend.netlify.app/.netlify/functions/api/gettask")
             .then((res) => { console.log(res.data); setDemo(res.data.data) })
             .catch((err) => { console.log(err.message); setError(err.message) })
     }
@@ -31,7 +31,7 @@ const ManageTask = () => {
         let task = demo.filter((dem) => {
             if (dem.Title === Title) {
                 dem.Status = Status
-                axios.put("https://task-management-backend.netlify.app/.netlify/functions/api/updatetask", { Title, Status })
+                axios.put("https://mern-stack-backend.netlify.app/.netlify/functions/api/updatetask", { Title, Status })
                     .then((res) => { console.log(res.data) })
                     .catch((err) => { console.log(err.message) })
             }
