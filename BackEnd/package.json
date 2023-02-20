@@ -8,7 +8,7 @@
     "start": "nodemon src/index.js",
     "build": "netlify deploy --prod"
   },
-  "author": "Harsh Yadav",
+  "author": "Pooja Sisodia",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1295.0",
